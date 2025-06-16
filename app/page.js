@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,37 +11,37 @@ export default function Home() {
       <nav aria-label="Main navigation">
         <ul>
           <li>
-            <a href="/speech">Speech-to-Text</a>
+            <Link href="/speech">Speech-to-Text</Link>
           </li>
           <li>
-            <a href="/feedback">Feedback</a>
+            <Link href="/feedback">Feedback</Link>
           </li>
           <li>
-            <a href="/preferences">Preferences</a>
+            <Link href="/preferences">Preferences</Link>
           </li>
           <li>
-            <a href="/community">Community</a>
+            <Link href="/community">Community</Link>
           </li>
           <li>
-            <a href="/chat">Chat Room</a>
+            <Link href="/chat">Chat Room</Link>
           </li>
           <li>
-            <a href="/video">Video Call</a>
+            <Link href="/video">Video Call</Link>
           </li>
           <li>
-            <a href="/text-to-speech">Text-to-Speech</a>
+            <Link href="/text-to-speech">Text-to-Speech</Link>
           </li>
           <li>
-            <a href="/sign-language">Sign Language Recognition</a>
+            <Link href="/sign-language">Sign Language Recognition</Link>
           </li>
           <li>
-            <a href="/sign-display">Text-to-Sign Display</a>
+            <Link href="/sign-display">Text-to-Sign Display</Link>
           </li>
           <li>
-            <a href="/alerts">Visual & Vibration Alerts</a>
+            <Link href="/alerts">Visual & Vibration Alerts</Link>
           </li>
           <li>
-            <a href="/accessibility">Accessibility Help</a>
+            <Link href="/accessibility">Accessibility Help</Link>
           </li>
         </ul>
       </nav>

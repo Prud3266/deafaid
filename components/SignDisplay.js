@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function SignDisplay({ signs }) {
   return (
@@ -18,11 +19,13 @@ export default function SignDisplay({ signs }) {
         <span style={{ color: "#888" }}>No signs to display.</span>
       ) : (
         signs.map((sign, i) => (
-          <img
+          <Image
             key={i}
             src={sign.src}
             alt={sign.alt}
-            style={{ height: 64, width: "auto", borderRadius: 8, background: "#fff" }}
+            height={64}
+            width={64} // Adjust if you know the actual width, or keep as 64 for square
+            style={{ borderRadius: 8, background: "#fff", width: "auto" }}
           />
         ))
       )}

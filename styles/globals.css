@@ -135,7 +135,7 @@ img[alt^="Sign"] {
 .navbar-list li a.active,
 .navbar-list li a[aria-current="page"] {
   background: #fff;
-  color: #1976d2;
+  color: #1976d2 !important; /* or use var(--accent) if you use CSS variables */
   font-weight: bold;
 }
 .navbar-title a {

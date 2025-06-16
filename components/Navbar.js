@@ -1,6 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -26,7 +27,7 @@ export default function Navbar() {
       <div className="navbar-top-row">
         <h1 tabIndex="0" className="navbar-title" style={{ display: "flex", alignItems: "center", gap: "0.5em", margin: 0 }}>
           <span role="img" aria-label="Ear with hearing aid" style={{ fontSize: "1.2em" }}>🦻</span>
-          <a href="/" style={{ color: "inherit", textDecoration: "none" }}>DeafAid</a>
+          <Link href="/" style={{ color: "inherit", textDecoration: "none" }}>DeafAid</Link>
         </h1>
         <button
           className="navbar-hamburger"
@@ -66,14 +67,15 @@ export default function Navbar() {
         <ol className="navbar-list">
           {navLinks.map(link => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className={pathname === link.href ? "active" : ""}
                 aria-current={pathname === link.href ? "page" : undefined}
                 onClick={() => setOpen(false)}
+                style={{ textDecoration: "none", color: "inherit" }}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ol>
