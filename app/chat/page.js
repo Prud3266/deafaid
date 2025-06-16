@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("https://deafaid-backend.onrender.com");
+const socket = io("https://deafaid-backend-1.onrender.com");
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([]);
