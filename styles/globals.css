@@ -1,0 +1,256 @@
+/* Base styles for the whole app */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px 0 #0002;
+  padding: 2em 1em;
+  margin: 2em auto;
+  max-width: 700px;
+}
+
+h1, h2, h3 {
+  color: #1976d2;
+  margin-bottom: 0.5em;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, button:focus {
+  background: #125ea2;
+}
+
+a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+ul, ol {
+  padding-left: 1.2em;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.2em;
+  display: block;
+}
+
+/* Style all sign images for a consistent look */
+img[alt^="Sign"] {
+  box-shadow: 0 2px 8px #0001;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  height: 64px;
+  width: auto;
+  display: inline-block;
+}
+
+/* --- Navbar Styles --- */
+.navbar-header {
+  background: #1976d2;
+  padding: 1em 0.5em;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-desc {
+  margin: 0.5em 0 0.5em 0;
+  font-size: 1em;
+  color: #e3f2fd;
+}
+
+.navbar-nav {
+  background: #1565c0;
+  padding: 0.7em 0.5em;
+  margin-bottom: 2em;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbar-list li a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.4em 1em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navbar-list li a:hover,
+.navbar-list li a:focus {
+  background: #90caf9;
+  color: #1565c0;
+  text-decoration: none;
+  outline: none;
+}
+
+.navbar-list li a.active,
+.navbar-list li a[aria-current="page"] {
+  background: #fff;
+  color: #1976d2;
+  font-weight: bold;
+}
+.navbar-title a {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (max-width: 700px) {
+  .navbar-list {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+  .navbar-header, .navbar-nav {
+    border-radius: 0;
+    padding: 0.5em 0.2em;
+  }
+  .navbar-title {
+    font-size: 1.2em;
+  }
+}
+
+/* Gradient and shadow for navbar */
+.navbar-header {
+  background: linear-gradient(90deg, #1976d2 60%, #1565c0 100%);
+  padding: 1em 0.5em;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 16px #0002;
+}
+
+.navbar-nav {
+  background: #1565c0;
+  padding: 0.7em 0.5em;
+  margin-bottom: 2em;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+/* Hamburger button styles */
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0.5em auto;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-hamburger-bar {
+  width: 28px;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Show hamburger and hide menu on mobile */
+@media (max-width: 700px) {
+  .navbar-hamburger {
+    display: flex;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-nav.open {
+    display: block;
+    animation: fadeIn 0.2s;
+  }
+  .navbar-list {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+}
+
+/* Optional: fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: none;}
+}
+
+/* Align title left and hamburger right in a row */
+.navbar-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+/* On mobile, keep spacing tight */
+@media (max-width: 700px) {
+  .navbar-top-row {
+    padding: 0 0.5em;
+  }
+}
+.theme-switcher {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #1976d2;
+  font-weight: 500;
+  margin-left: 1em;
+}
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
