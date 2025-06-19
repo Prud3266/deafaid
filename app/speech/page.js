@@ -54,7 +54,7 @@ export default function SpeechPage() {
     setError("");
     try {
       // Use a more reliable endpoint
-      const res = await fetch("https://translate.argosopentech.com/translate", {
+      const res = await fetch("/api/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
