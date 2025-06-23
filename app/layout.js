@@ -6,7 +6,7 @@ import PreferenceLoader from "../components/PreferenceLoader";
 export const metadata = {
   title: "DeafAid",
   description: "Accessibility-focused communication app for deaf and hard-of-hearing users.",
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/favicon.png" },
   manifest: "/manifest.json",
 };
 

@@ -102,11 +102,11 @@ export default function SpeechPage() {
           <strong>Transcript (EN):</strong><br />
           {transcript || <span style={{ color: "#888" }}>Your speech will appear here...</span>}
         </div>
-        <div style={{ marginTop: "1em", background: "#e3f2fd", padding: "0.5em", borderRadius: "6px" }}>
+        {/* <div style={{ marginTop: "1em", background: "#e3f2fd", padding: "0.5em", borderRadius: "6px" }}>
           <strong>Translation (FR):</strong><br />
           {translation || <span style={{ color: "#888" }}>French translation will appear here...</span>}
-        </div>
-        {error && (
+        </div> */}
+        {/* {error && (
           <div
             role="alert"
             style={{
@@ -119,7 +119,7 @@ export default function SpeechPage() {
           >
             {error}
           </div>
-        )}
+        )} */}
       </section>
     </main>
   );
