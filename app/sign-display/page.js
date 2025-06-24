@@ -33,6 +33,7 @@ export default function SignDisplayPage() {
     setSigns(newSigns);
   }
 
+  
   // Helper: check if a word sign image exists (basic, assumes common words)
   function isWordSignAvailable(word) {
     // For demo, assume images exist for "hello", "thank", "you"

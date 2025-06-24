@@ -48,3 +48,4 @@ export default function Home() {
     </main>
   );
 }
+// This is the main page of the DeafAid app, providing links to various features and services.
