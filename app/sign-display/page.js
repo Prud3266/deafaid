@@ -62,5 +62,6 @@ export default function SignDisplayPage() {
       </form>
       <SignDisplay signs={signs} />
     </main>
+    
   );
 }
