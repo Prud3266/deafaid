@@ -36,7 +36,7 @@ export default function SignDisplayPage() {
   // Helper: check if a word sign image exists (basic, assumes common words)
   function isWordSignAvailable(word) {
     // For demo, assume images exist for "hello", "thank", "you"
-    return ["Afternoon", "Good", "Hi", "Hello", "How are you", "Look at that", "is", "Morning", "my", "name", "night", "Thank you", "What", "your"].includes(word);
+    return ["Afternoon", "Good", "Hi", "Hello", "How are you", "my", "Look at that", "is", "Morning", "My", "name", "night", "Thank you", "What", "your"].includes(word);
   }
   // Helper: check if a letter sign image exists (a-z)
   function isLetterSignAvailable(letter) {
